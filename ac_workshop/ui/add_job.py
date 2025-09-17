@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
-from ..models import Job
-from ..database import insert_job
+from ac_workshop.models import Job
+from ac_workshop.database import insert_job
 from datetime import datetime
 
 class AddJobWindow(tk.Tk):
@@ -118,5 +118,5 @@ class AddJobWindow(tk.Tk):
 
     def go_back(self):
         self.destroy()
-        from ..ui.main_menu import MainMenu
+        from ac_workshop.ui.main_menu import MainMenu
         MainMenu().mainloop()

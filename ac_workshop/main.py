@@ -1,6 +1,6 @@
 import logging
-from .ui.login import LoginWindow
-from .database import init_db
+from ac_workshop.ui.login import LoginWindow
+from ac_workshop.database import init_db
 
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s [%(levelname)s] %(message)s",

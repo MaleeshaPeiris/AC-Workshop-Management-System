@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from ..database import get_upcoming_services
+from ac_workshop.database import get_upcoming_services
 
 class UpcomingServicesWindow(tk.Tk):
     def __init__(self):
@@ -41,5 +41,5 @@ class UpcomingServicesWindow(tk.Tk):
 
     def go_back(self):
         self.destroy()
-        from ..ui.main_menu import MainMenu
+        from ac_workshop.ui.main_menu import MainMenu
         MainMenu().mainloop()

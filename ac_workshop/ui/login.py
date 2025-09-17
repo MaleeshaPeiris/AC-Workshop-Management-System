@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from ..database import validate_user
+from ac_workshop.database import validate_user
 
 class LoginWindow(tk.Tk):
     def __init__(self):
@@ -20,7 +20,7 @@ class LoginWindow(tk.Tk):
     def try_login(self):
         if validate_user(self.username.get(), self.password.get()):
             self.destroy()
-            from ..ui.main_menu import MainMenu
+            from ac_workshop.ui.main_menu import MainMenu
             MainMenu().mainloop()
         else:
             messagebox.showerror("Login Failed", "Invalid credentials")

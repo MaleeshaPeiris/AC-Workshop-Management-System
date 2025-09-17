@@ -12,10 +12,10 @@ class MainMenu(tk.Tk):
 
     def open_add_job(self):
         self.destroy()
-        from ..ui.add_job import AddJobWindow
+        from ac_workshop.ui.add_job import AddJobWindow
         AddJobWindow().mainloop()
 
     def open_upcoming(self):
         self.destroy()
-        from ..ui.upcoming import UpcomingServicesWindow
+        from ac_workshop.ui.upcoming import UpcomingServicesWindow
         UpcomingServicesWindow().mainloop()
