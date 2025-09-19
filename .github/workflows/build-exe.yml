@@ -26,7 +26,7 @@ jobs:
       - name: Build EXE with PyInstaller
         run: |
           # Run as module so package imports work
-          pyinstaller --onefile --name ac_workshop.exe -m ac_workshop.main
+          pyinstaller --onefile --name ac_workshop.exe ac_workshop/main.py --paths .
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
