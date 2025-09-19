@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'   # choose your version
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -25,7 +25,8 @@ jobs:
 
       - name: Build EXE with PyInstaller
         run: |
-          pyinstaller --onefile --name ac_workshop.exe ac_workshop/main.py
+          # Run as module so package imports work
+          pyinstaller --onefile --name ac_workshop.exe -m ac_workshop.main
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
